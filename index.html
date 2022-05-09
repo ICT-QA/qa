@@ -48,12 +48,12 @@ gtag('config', 'G-ZB2PPDH365');
 <a name="#1"></a>
 <div class="qbox"><span  class="q">Q.</span>どのサービスでお困りですか?</div>
 <div class="qabox">
-<a href="#1_1" onclick="show(1_1)" class="qabtn"><div class="btnBox btnBox_y">英単語アプリ</div></a>
+<a href="#2" onclick="show(2)" class="qabtn"><div class="btnBox btnBox_y">英単語アプリ</div></a>
 <a href="#1_2" onclick="show(1_2)" class="qabtn"><div class="btnBox btnBox_n">i Step Club【準備中】</div></a>
 <a href="#1_3"  onclick="show(1_3)" class="qabtn"><div class="btnBox btnBox_n">テストエディタ【準備中】</div></a>
 </div>
 </li>
-<li id="1_1" class="question" style="display:none;">
+<li id="2" class="question" style="display:none;">
 <a name="#"></a>
 <div class="qbox"><span  class="q">Q.</span>何について知りたいですか？</div>
 <div class="qabox">
@@ -213,27 +213,29 @@ gtag('config', 'G-ZB2PPDH365');
 </article>
 </main>
 </div>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function(){
-$('a[href^=#]').click(function() {
-var speed = 600;
-var href= $(this).attr("href");
-var target = $(href == "#" || href == "" ? 'html' : href);
-var position = target.offset().top;
-$('body,html').animate({scrollTop:position}, speed, 'swing');
-return false;
-});
+   $('a[href^=#]').click(function() {
+      var speed = 600;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
 });
 $(function(){
-h = $(window).height();
-h = h-30;
-$(".question").css("min-height", h + "px");
-$(".answerList .box").css("min-height", h + "px");
+    h = $(window).height();
+    h = h-30;
+    $(".question").css("min-height", h + "px");
+    $(".answerList .box").css("min-height", h + "px");
 
 });
 function show(idName){
-$("#" + idName).show();
+    $("#" + idName).show();
 }
 </script>
 </body>
